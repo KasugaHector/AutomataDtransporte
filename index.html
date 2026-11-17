@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Control de Acceso - Transporte CDMX</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Sistema de Control de Acceso CDMX</h1>
+    <h2>Validación de Transporte y Folio</h2>
+
+    <div class="status-panel" id="statusPanel">
+        <div class="turnstile-icon" id="turnstileIcon">🔒</div>
+        <div class="status-message" id="statusMessage">TORNIQUETE BLOQUEADO</div>
+    </div>
+
+    <div class="feedback" id="feedbackMessage"></div>
+
+    <div class="input-group">
+        <label for="inputUnico">Ingrese Código (Transporte + 9 Dígitos):</label>
+        <input type="text" id="inputUnico" placeholder="Ej: MTO123456789" maxlength="12" autocomplete="off" spellcheck="false">
+        <div class="hint">Formato: 3 letras del transporte (MTO, TLO, TLB, CBS, MTB, RTP) seguidas de exactamente 9 números. Solo mayúsculas.</div>
+    </div>
+
+    <div class="visor" id="visor"></div>
+
+    <div class="btn-group">
+        <button class="btn-submit" id="btnValidate">Validar Acceso</button>
+        <button class="btn-pass" id="btnPass">Pasar Torniquete</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
